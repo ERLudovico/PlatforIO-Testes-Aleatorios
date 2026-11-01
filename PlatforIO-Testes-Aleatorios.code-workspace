@@ -3,6 +3,10 @@
 		{
 			"name": "RX-TX-RF24-HALL-DUPLEX-DEBUG",
 			"path": "RX-TX-RF24-HALL-DUPLEX-DEBUG"
+		},
+		{
+			"name": "RX-TX-RF24-FULL-DUPLEX-DEBUG",
+			"path": "RX-TX-RF24-FULL-DUPLEX-DEBUG"
 		}
 	],
 	"settings": {}
