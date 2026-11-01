@@ -1,0 +1,11 @@
+{
+    "VsCodeTaskButtons.showCounter": false,
+    "VsCodeTaskButtons.tasks": [
+        {
+            "label": "$(terminal) Monitores RF24",
+            "task": "RF24: abrir os dois monitores",
+            "alignment": "left",
+            "tooltip": "Abrir usbserial-120 e usbserial-130 a 115200 baud"
+        }
+    ]
+}
