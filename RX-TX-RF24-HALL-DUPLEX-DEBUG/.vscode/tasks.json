@@ -3,42 +3,23 @@
     "tasks": [
         {
             "label": "RF24: abrir os dois monitores",
-            "dependsOn": [
-                "RF24: monitor usbserial-120",
-                "RF24: monitor usbserial-130"
+            "type": "process",
+            "command": "/usr/bin/python3",
+            "args": [
+                "${workspaceFolder}/.vscode/open_rf24_monitors.py"
             ],
-            "dependsOrder": "parallel",
-            "problemMatcher": []
-        },
-        {
-            "label": "RF24: monitor usbserial-120",
-            "type": "process",
-            "command": "${env:HOME}/.platformio/penv/bin/pio",
-            "args": ["device", "monitor", "--port", "/dev/cu.usbserial-120", "--baud", "115200"],
             "options": {
                 "cwd": "${workspaceFolder}"
             },
             "presentation": {
-                "reveal": "always",
+                "reveal": "silent",
+                "focus": false,
                 "panel": "dedicated",
-                "group": "rf24-monitores",
-                "showReuseMessage": false
+                "showReuseMessage": false,
+                "close": true
             },
-            "problemMatcher": []
-        },
-        {
-            "label": "RF24: monitor usbserial-130",
-            "type": "process",
-            "command": "${env:HOME}/.platformio/penv/bin/pio",
-            "args": ["device", "monitor", "--port", "/dev/cu.usbserial-130", "--baud", "115200"],
-            "options": {
-                "cwd": "${workspaceFolder}"
-            },
-            "presentation": {
-                "reveal": "always",
-                "panel": "dedicated",
-                "group": "rf24-monitores",
-                "showReuseMessage": false
+            "runOptions": {
+                "instanceLimit": 1
             },
             "problemMatcher": []
         }
